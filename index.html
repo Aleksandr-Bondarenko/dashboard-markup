@@ -15,8 +15,196 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
+    <aside class="side-bar">
+      <header class="header">
+        <div class="logo">
+          <img src="" alt="App logo" class="logo__icon" />
+          <p class="logo__text">Dashboard<span class="">v.01</span></p>
+        </div>
+      </header>
+
+      <nav class="nav-menu">
+        <ul class="list">
+          <li class="nav-menu__item">
+            <a class="link nav-menu__link" href="">Dashboard</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="link nav-menu__link" href="">Product</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="link nav-menu__link" href="">Customers</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="link nav-menu__link" href="">Income</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="link nav-menu__link" href="">Promote</a>
+          </li>
+          <li class="nlink av-menu__item">
+            <a class="link nav-menu__link" href="">Help</a>
+          </li>
+        </ul>
+      </nav>
+
+      <footer>
+        <img src="" alt="User avatar" class="user-avatar" />
+        <p class="user-name">Evano</p>
+        <p class="user-position">Project Manager</p>
+      </footer>
+    </aside>
+
     <main>
-      <h1>Dashboard App</h1>
+      <strong class="greeting">Hello Evano 👋🏼,</strong>
+
+      <section class="customers">
+        <!-- <h1>Customers list</h1> -->
+
+        <input
+          class="customers__search"
+          type="text"
+          name=""
+          id=""
+          placeholder="Search"
+        />
+
+        <table class="customers__table">
+          <caption>
+            <h2>All Customers</h2>
+            <p>Active Members</p>
+          </caption>
+          <thead>
+            <tr>
+              <th>Customer Name</th>
+              <th>Company</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Country</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Jane Cooper</td>
+              <td>Microsoft</td>
+              <td>(225) 555-0118</td>
+              <td>jane@microsoft.com</td>
+              <td>United States</td>
+              <td>
+                <button class="btn" type="button">Active</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Floyd Miles</td>
+              <td>Yahoo</td>
+              <td>(205) 555-0100</td>
+              <td>floyd@yahoo.com</td>
+              <td>Kiribati</td>
+              <td>
+                <button class="btn" type="button">Inactive</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ronald Richards</td>
+              <td>Adobe</td>
+              <td>(302) 555-0107</td>
+              <td>ronald@adobe.com</td>
+              <td>Israel</td>
+              <td>
+                <button class="btn" type="button">Inactive</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Marvin McKinney</td>
+              <td>Tesla</td>
+              <td>(252) 555-0126</td>
+              <td>marvin@tesla.com</td>
+              <td>Iran</td>
+              <td>
+                <button class="btn" type="button">Active</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Jerome Bell</td>
+              <td>Google</td>
+              <td>(629) 555-0129</td>
+              <td>jerome@google.com</td>
+              <td>Réunion</td>
+              <td>
+                <button class="btn" type="button">Active</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Kathryn Murphy</td>
+              <td>Microsoft</td>
+              <td>(406) 555-0120</td>
+              <td>kathryn@microsoft.com</td>
+              <td>Curaçao</td>
+              <td>
+                <button class="btn" type="button">Active</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Jacob Jones</td>
+              <td>Yahoo</td>
+              <td>(208) 555-0112</td>
+              <td>jacob@yahoo.com</td>
+              <td>Brazil</td>
+              <td>
+                <button class="btn" type="button">Active</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Kristin Watson</td>
+              <td>Facebook</td>
+              <td>(704) 555-0127</td>
+              <td>kristin@facebook.com</td>
+              <td>Åland Islands</td>
+              <td>
+                <button class="btn" type="button">Inactive</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="data-desc">Showing data 1 to 8 of 256K entries</p>
+        <ul class="list pagination">
+          <li class="pagination__item">
+            <button
+              class="btn pagination__btn pagination__btn--left"
+              type="button"
+            >
+              Left Arr
+            </button>
+          </li>
+          <li class="pagination__item">
+            <button class="btn pagination__btn" type="button">1</button>
+          </li>
+          <li class="pagination__item">
+            <button class="btn pagination__btn" type="button">2</button>
+          </li>
+          <li class="pagination__item">
+            <button class="btn pagination__btn" type="button">3</button>
+          </li>
+          <li class="pagination__item">
+            <button class="btn pagination__btn" type="button">4</button>
+          </li>
+          <li class="pagination__item">
+            <button class="btn pagination__btn" type="button">1</button>
+          </li>
+          <li class="pagination__item">
+            <button class="btn pagination__btn" type="button">40</button>
+          </li>
+          <li class="pagination__item">
+            <button
+              class="btn pagination__btn pagination__btn--right"
+              type="button"
+            >
+              Right Arr
+            </button>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
