@@ -1,0 +1,15 @@
+.footer {
+  position: fixed;
+  bottom: 76px;
+  left: 28px;
+
+  &__user-name {
+    letter-spacing: 0.01em;
+    color: getTextColor("user-name");
+  }
+
+  &__user-position {
+    @include font(12px, 400, 0.01em);
+    color: getTextColor("user-position");
+  }
+}

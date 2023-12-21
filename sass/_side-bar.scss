@@ -4,6 +4,11 @@
 
 .logo {
   display: flex;
+  margin-bottom: 76px;
+
+  &__icon {
+    height: 37px;
+  }
 
   &__text {
     @include font(26px, 600, 0.01em);
@@ -19,8 +24,6 @@
 }
 
 .nav-menu {
-  margin-bottom: 598px;
-
   &__item {
     display: flex;
     align-items: center;
@@ -43,14 +46,4 @@
   &__link {
     color: inherit;
   }
-}
-
-.user-name {
-  letter-spacing: 0.01em;
-  color: getTextColor("user-name");
-}
-
-.user-position {
-  @include font(12px, 400, 0.01em);
-  color: getTextColor("user-position");
 }

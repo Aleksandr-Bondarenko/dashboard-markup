@@ -24,7 +24,12 @@
     <aside class="side-bar">
       <header class="header">
         <div class="logo">
-          <img src="" alt="App logo" class="logo__icon" />
+          <img
+            src="./images/app-logo-icon.svg"
+            alt="App logo"
+            class="logo__icon"
+            width="37"
+          />
           <p class="logo__text">
             Dashboard<span class="logo__subtext">v.01</span>
           </p>
@@ -34,30 +39,73 @@
       <nav class="nav-menu">
         <ul class="list">
           <li class="nav-menu__item">
+            <svg width="24">
+              <use href="./images/sprite.svg#dashboard-icon"></use>
+            </svg>
             <a class="link nav-menu__link" href="">Dashboard</a>
           </li>
+
           <li class="nav-menu__item">
+            <svg width="24">
+              <use href="./images/sprite.svg#product-icon"></use>
+            </svg>
             <a class="link nav-menu__link" href="">Product</a>
+            <svg width="16">
+              <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
+            </svg>
           </li>
+
           <li class="nav-menu__item nav-menu__item--accent">
+            <svg width="24">
+              <use href="./images/sprite.svg#customers-icon"></use>
+            </svg>
             <a class="link nav-menu__link" href="">Customers</a>
+            <svg width="16">
+              <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
+            </svg>
           </li>
+
           <li class="nav-menu__item">
+            <svg width="24">
+              <use href="./images/sprite.svg#income-icon"></use>
+            </svg>
             <a class="link nav-menu__link" href="">Income</a>
+            <svg width="16">
+              <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
+            </svg>
           </li>
+
           <li class="nav-menu__item">
+            <svg width="24">
+              <use href="./images/sprite.svg#promote-icon"></use>
+            </svg>
             <a class="link nav-menu__link" href="">Promote</a>
+            <svg width="16">
+              <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
+            </svg>
           </li>
+
           <li class="nav-menu__item">
+            <svg width="24">
+              <use href="./images/sprite.svg#help-icon"></use>
+            </svg>
             <a class="link nav-menu__link" href="">Help</a>
+            <svg width="16">
+              <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
+            </svg>
           </li>
         </ul>
       </nav>
 
-      <footer>
-        <img src="" alt="User avatar" class="user-avatar" />
-        <p class="user-name">Evano</p>
-        <p class="user-position">Project Manager</p>
+      <footer class="footer">
+        <img
+          width="42"
+          src="./images/avatar.jpg"
+          alt="User avatar"
+          class="footer__user-avatar"
+        />
+        <p class="footer__user-name">Evano</p>
+        <p class="footer__user-position">Project Manager</p>
       </footer>
     </aside>
 
@@ -67,13 +115,15 @@
       <section class="customers">
         <!-- <h1>Customers list</h1> -->
 
-        <input
-          class="customers__search"
-          type="text"
-          name=""
-          id=""
-          placeholder="Search"
-        />
+        <div class="customers__search-wrap">
+          <input
+            class="customers__search"
+            type="text"
+            name=""
+            id=""
+            placeholder="Search"
+          />
+        </div>
 
         <table class="customers-table">
           <caption>
@@ -213,7 +263,7 @@
               class="btn pagination__btn pagination__btn--left"
               type="button"
             >
-              L
+              &lt;
             </button>
           </li>
           <li class="pagination__item">
@@ -234,9 +284,6 @@
             <button class="btn pagination__btn" type="button">4</button>
           </li>
           <li class="pagination__item">
-            <button class="btn pagination__btn" type="button">1</button>
-          </li>
-          <li class="pagination__item">
             <button class="btn pagination__btn" type="button">40</button>
           </li>
           <li class="pagination__item">
@@ -244,7 +291,7 @@
               class="btn pagination__btn pagination__btn--right"
               type="button"
             >
-              R
+              &gt;
             </button>
           </li>
         </ul>

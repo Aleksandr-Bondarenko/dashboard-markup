@@ -2,4 +2,12 @@
   &__data-note {
     color: getTextColor("secondary");
   }
+
+  &__search-wrap::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/search-icon.svg");
+  }
 }

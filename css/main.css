@@ -50,6 +50,10 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 76px;
+}
+.logo__icon {
+  height: 37px;
 }
 .logo__text {
   font-size: 26px;
@@ -68,9 +72,6 @@ p {
   color: #838383;
 }
 
-.nav-menu {
-  margin-bottom: 598px;
-}
 .nav-menu__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,11 +96,15 @@ p {
   color: inherit;
 }
 
-.user-name {
+.footer {
+  position: fixed;
+  bottom: 76px;
+  left: 28px;
+}
+.footer__user-name {
   letter-spacing: 0.01em;
 }
-
-.user-position {
+.footer__user-position {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -109,6 +114,13 @@ p {
 
 .customers__data-note {
   color: #b5b7c0;
+}
+.customers__search-wrap::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/search-icon.svg");
 }
 
 .customers__search {
