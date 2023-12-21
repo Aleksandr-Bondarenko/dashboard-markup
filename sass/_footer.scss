@@ -1,7 +1,11 @@
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 76px;
-  left: 28px;
+  display: flex;
+
+  &__user-avatar {
+    margin-right: 12px;
+  }
 
   &__user-name {
     letter-spacing: 0.01em;

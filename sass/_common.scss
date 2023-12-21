@@ -3,6 +3,7 @@ body {
   font-family: $font-family;
   @include font(14px, 500);
   color: getTextColor("main-content");
+  background-color: getBgc("main");
 }
 
 h1,
@@ -29,7 +30,13 @@ p {
   cursor: pointer;
 }
 
+.main-content {
+  padding-top: 41px;
+  padding-right: 28px;
+}
+
 .greeting {
+  margin-bottom: 57px;
   @include font(24px, 500, 0em);
   color: getTextColor("greeting");
 }

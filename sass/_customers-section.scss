@@ -1,6 +1,21 @@
 .customers {
+  position: relative;
+  width: 968px;
+  height: 812px;
+  padding-top: 24px;
+  border-radius: 30px;
+  background-color: getBgc("secondary");
+  box-shadow: 0 10px 60px 0 $shadow-color;
+
   &__data-note {
+    margin-right: 376px;
     color: getTextColor("secondary");
+  }
+
+  &__search-wrap {
+    position: absolute;
+    top: 38px;
+    right: 53px;
   }
 
   &__search-wrap::before {
@@ -9,5 +24,14 @@
     width: 24px;
     height: 24px;
     background-image: url("../images/search-icon.svg");
+    position: absolute;
+    left: 8px;
+    top: 7px;
+  }
+
+  &__footer {
+    display: flex;
+    margin-top: 34px;
+    padding-left: 38px;
   }
 }

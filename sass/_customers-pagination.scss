@@ -1,6 +1,15 @@
 .pagination {
   display: flex;
 
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__item:nth-child(6) {
+    width: 9px;
+    user-select: none;
+  }
+
   &__btn {
     width: 24px;
     height: 24px;

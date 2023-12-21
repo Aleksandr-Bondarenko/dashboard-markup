@@ -1,8 +1,17 @@
 .customers-table {
-  //   @include font(14px, 500);
+  // max-width: 968;
+  // overflow: scroll;
+  border-collapse: collapse;
+
+  &__caption {
+    margin-bottom: 37px;
+    padding-left: 38px;
+  }
+
   &__heading {
     @include font(22px, 600);
     color: getTextColor("table-name");
+    margin-bottom: 7px;
   }
 
   &__status-note {
@@ -14,13 +23,62 @@
     text-align: left;
   }
 
-  &__head-row > th {
+  &__head tr {
+    border-bottom: 1px solid getBorderColor("pagination-btn");
+  }
+
+  &__head th {
+    padding: 0;
+    padding-bottom: 14px;
     font-weight: 500;
     color: getTextColor("secondary");
   }
 
-  &__head-row > th:not(:last-child) {
+  &__head th:not(:last-child) {
     text-align: left;
+  }
+
+  &__head th:nth-child(1) {
+    padding-left: 38px;
+    padding-right: 57px;
+  }
+
+  &__head th:nth-child(2) {
+    padding-right: 61px;
+  }
+
+  &__head th:nth-child(3) {
+    padding-right: 52px;
+  }
+
+  &__head th:nth-child(4) {
+    padding-right: 168px;
+  }
+
+  &__head th:nth-child(5) {
+    padding-right: 78px;
+  }
+
+  &__head th:nth-child(6) {
+    padding-right: 67px;
+    padding-left: 18px;
+  }
+
+  &__body td {
+    padding: 20px 0;
+    border-bottom: 1px solid getBorderColor("pagination-btn");
+  }
+
+  &__body td:first-child {
+    width: 38px;
+  }
+
+  &__body td:last-child {
+    width: 49px;
+  }
+
+  &__body td:empty {
+    border-bottom: none;
   }
 
   &__status-btn {

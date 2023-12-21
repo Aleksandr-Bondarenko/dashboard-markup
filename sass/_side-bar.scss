@@ -1,10 +1,15 @@
 .side-bar {
+  position: relative;
   width: 306px;
+  min-height: 100vh;
+  margin-right: 71px;
+  padding: 36px 28px 0;
+  background-color: getBgc("secondary");
 }
 
 .logo {
   display: flex;
-  margin-bottom: 76px;
+  margin-bottom: 53px;
 
   &__icon {
     height: 37px;
@@ -33,6 +38,10 @@
     color: getTextColor("nav-menu-item");
   }
 
+  &__item {
+    cursor: pointer;
+  }
+
   &__item:not(:last-child) {
     margin-bottom: 18px;
   }
@@ -43,7 +52,19 @@
     background-color: getBgc("accent");
   }
 
+  &__item--accent &__icon {
+    fill: getTextColor("accent");
+    stroke: getTextColor("accent");
+  }
+
+  &__icon {
+    fill: getTextColor("nav-menu-item");
+    stroke: getTextColor("nav-menu-item");
+  }
+
   &__link {
+    margin-left: 14px;
+    margin-right: auto;
     color: inherit;
   }
 }

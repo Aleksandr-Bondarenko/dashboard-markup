@@ -39,58 +39,58 @@
       <nav class="nav-menu">
         <ul class="list">
           <li class="nav-menu__item">
-            <svg width="24">
+            <svg class="nav-menu__icon" width="24">
               <use href="./images/sprite.svg#dashboard-icon"></use>
             </svg>
             <a class="link nav-menu__link" href="">Dashboard</a>
           </li>
 
           <li class="nav-menu__item">
-            <svg width="24">
+            <svg class="nav-menu__icon" width="24">
               <use href="./images/sprite.svg#product-icon"></use>
             </svg>
             <a class="link nav-menu__link" href="">Product</a>
-            <svg width="16">
+            <svg class="nav-menu__icon" width="16">
               <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
             </svg>
           </li>
 
           <li class="nav-menu__item nav-menu__item--accent">
-            <svg width="24">
+            <svg class="nav-menu__icon nav-menu__icon" width="24">
               <use href="./images/sprite.svg#customers-icon"></use>
             </svg>
             <a class="link nav-menu__link" href="">Customers</a>
-            <svg width="16">
+            <svg class="nav-menu__icon" width="16">
               <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
             </svg>
           </li>
 
           <li class="nav-menu__item">
-            <svg width="24">
+            <svg class="nav-menu__icon" width="24">
               <use href="./images/sprite.svg#income-icon"></use>
             </svg>
             <a class="link nav-menu__link" href="">Income</a>
-            <svg width="16">
+            <svg class="nav-menu__icon" width="16">
               <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
             </svg>
           </li>
 
           <li class="nav-menu__item">
-            <svg width="24">
+            <svg class="nav-menu__icon" width="24">
               <use href="./images/sprite.svg#promote-icon"></use>
             </svg>
             <a class="link nav-menu__link" href="">Promote</a>
-            <svg width="16">
+            <svg class="nav-menu__icon" width="16">
               <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
             </svg>
           </li>
 
           <li class="nav-menu__item">
-            <svg width="24">
+            <svg class="nav-menu__icon" width="24">
               <use href="./images/sprite.svg#help-icon"></use>
             </svg>
             <a class="link nav-menu__link" href="">Help</a>
-            <svg width="16">
+            <svg class="nav-menu__icon" width="16">
               <use href="./images/sprite.svg#nav-menu-item-arrow"></use>
             </svg>
           </li>
@@ -104,17 +104,17 @@
           alt="User avatar"
           class="footer__user-avatar"
         />
-        <p class="footer__user-name">Evano</p>
-        <p class="footer__user-position">Project Manager</p>
+        <div>
+          <p class="footer__user-name">Evano</p>
+          <p class="footer__user-position">Project Manager</p>
+        </div>
       </footer>
     </aside>
 
-    <main>
-      <strong class="greeting">Hello Evano 👋🏼,</strong>
+    <main class="main-content">
+      <p class="greeting"><strong>Hello Evano 👋🏼,</strong></p>
 
       <section class="customers">
-        <!-- <h1>Customers list</h1> -->
-
         <div class="customers__search-wrap">
           <input
             class="customers__search"
@@ -126,23 +126,24 @@
         </div>
 
         <table class="customers-table">
-          <caption>
+          <caption class="customers-table__caption">
             <h2 class="customers-table__heading">All Customers</h2>
             <p class="customers-table__status-note">Active Members</p>
           </caption>
-          <thead>
-            <tr class="customers-table__head-row">
-              <th>Customer Name</th>
+          <thead class="customers-table__head">
+            <tr>
+              <th colspan="2">Customer Name</th>
               <th>Company</th>
               <th>Phone Number</th>
               <th>Email</th>
               <th>Country</th>
-              <th>Status</th>
+              <th colspan="2">Status</th>
             </tr>
           </thead>
 
-          <tbody>
+          <tbody class="customers-table__body">
             <tr>
+              <td></td>
               <td>Jane Cooper</td>
               <td>Microsoft</td>
               <td>(225) 555-0118</td>
@@ -156,8 +157,10 @@
                   Active
                 </button>
               </td>
+              <td></td>
             </tr>
             <tr>
+              <td></td>
               <td>Floyd Miles</td>
               <td>Yahoo</td>
               <td>(205) 555-0100</td>
@@ -168,8 +171,10 @@
                   Inactive
                 </button>
               </td>
+              <td></td>
             </tr>
             <tr>
+              <td></td>
               <td>Ronald Richards</td>
               <td>Adobe</td>
               <td>(302) 555-0107</td>
@@ -180,8 +185,10 @@
                   Inactive
                 </button>
               </td>
+              <td></td>
             </tr>
             <tr>
+              <td></td>
               <td>Marvin McKinney</td>
               <td>Tesla</td>
               <td>(252) 555-0126</td>
@@ -195,8 +202,10 @@
                   Active
                 </button>
               </td>
+              <td></td>
             </tr>
             <tr>
+              <td></td>
               <td>Jerome Bell</td>
               <td>Google</td>
               <td>(629) 555-0129</td>
@@ -210,8 +219,10 @@
                   Active
                 </button>
               </td>
+              <td></td>
             </tr>
             <tr>
+              <td></td>
               <td>Kathryn Murphy</td>
               <td>Microsoft</td>
               <td>(406) 555-0120</td>
@@ -225,8 +236,10 @@
                   Active
                 </button>
               </td>
+              <td></td>
             </tr>
             <tr>
+              <td></td>
               <td>Jacob Jones</td>
               <td>Yahoo</td>
               <td>(208) 555-0112</td>
@@ -240,8 +253,10 @@
                   Active
                 </button>
               </td>
+              <td></td>
             </tr>
             <tr>
+              <td></td>
               <td>Kristin Watson</td>
               <td>Facebook</td>
               <td>(704) 555-0127</td>
@@ -252,49 +267,55 @@
                   Inactive
                 </button>
               </td>
+              <td></td>
             </tr>
           </tbody>
         </table>
 
-        <p class="customers__data-note">Showing data 1 to 8 of 256K entries</p>
-        <ul class="list pagination">
-          <li class="pagination__item">
-            <button
-              class="btn pagination__btn pagination__btn--left"
-              type="button"
-            >
-              &lt;
-            </button>
-          </li>
-          <li class="pagination__item">
-            <button
-              class="btn pagination__btn pagination__btn--accent"
-              type="button"
-            >
-              1
-            </button>
-          </li>
-          <li class="pagination__item">
-            <button class="btn pagination__btn" type="button">2</button>
-          </li>
-          <li class="pagination__item">
-            <button class="btn pagination__btn" type="button">3</button>
-          </li>
-          <li class="pagination__item">
-            <button class="btn pagination__btn" type="button">4</button>
-          </li>
-          <li class="pagination__item">
-            <button class="btn pagination__btn" type="button">40</button>
-          </li>
-          <li class="pagination__item">
-            <button
-              class="btn pagination__btn pagination__btn--right"
-              type="button"
-            >
-              &gt;
-            </button>
-          </li>
-        </ul>
+        <div class="customers__footer">
+          <p class="customers__data-note">
+            Showing data 1 to 8 of 256K entries
+          </p>
+          <ul class="list pagination">
+            <li class="pagination__item">
+              <button
+                class="btn pagination__btn pagination__btn--left"
+                type="button"
+              >
+                &lt;
+              </button>
+            </li>
+            <li class="pagination__item">
+              <button
+                class="btn pagination__btn pagination__btn--accent"
+                type="button"
+              >
+                1
+              </button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn pagination__btn" type="button">2</button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn pagination__btn" type="button">3</button>
+            </li>
+            <li class="pagination__item">
+              <button class="btn pagination__btn" type="button">4</button>
+            </li>
+            <li class="pagination__item">...</li>
+            <li class="pagination__item">
+              <button class="btn pagination__btn" type="button">40</button>
+            </li>
+            <li class="pagination__item">
+              <button
+                class="btn pagination__btn pagination__btn--right"
+                type="button"
+              >
+                &gt;
+              </button>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
   </body>
