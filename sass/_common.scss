@@ -1,5 +1,7 @@
 body {
-  background-color: #ffffff;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  @include font(14px, 500);
 }
 
 h1,
@@ -24,4 +26,8 @@ p {
 
 .btn {
   cursor: pointer;
+}
+
+.greeting {
+  @include font(24px, 500, 0em);
 }

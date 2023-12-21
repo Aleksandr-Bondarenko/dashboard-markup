@@ -1,0 +1,19 @@
+.customers-table {
+  //   @include font(14px, 500);
+  &__heading {
+    @include font(22px, 600);
+  }
+
+  &__heading,
+  &__status-note {
+    text-align: left;
+  }
+
+  &__head-row > th {
+    font-weight: 500;
+  }
+
+  &__head-row > th:not(:last-child) {
+    text-align: left;
+  }
+}

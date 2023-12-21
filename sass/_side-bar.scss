@@ -1,0 +1,29 @@
+.side-bar {
+  width: 306px;
+}
+
+.logo {
+  display: flex;
+
+  &__text {
+    @include font(26px, 600, 0.01em);
+    margin-left: 8px;
+  }
+
+  &__subtext {
+    @include font(10px, 500);
+    margin-left: 4px;
+  }
+}
+
+.nav-menu {
+  margin-bottom: 598px;
+}
+
+.user-name {
+  letter-spacing: 0.01em;
+}
+
+.user-position {
+  @include font(12px, 400, 0.01em);
+}

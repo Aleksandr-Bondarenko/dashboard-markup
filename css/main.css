@@ -1,5 +1,12 @@
 body {
-  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
 }
 
 h1,
@@ -24,4 +31,83 @@ p {
 
 .btn {
   cursor: pointer;
+}
+
+.greeting {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 1.5;
+}
+
+.side-bar {
+  width: 306px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.logo__text {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  margin-left: 8px;
+}
+.logo__subtext {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  margin-left: 4px;
+}
+
+.nav-menu {
+  margin-bottom: 598px;
+}
+
+.user-name {
+  letter-spacing: 0.01em;
+}
+
+.user-position {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.customers__search {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+.customers-table__heading {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+.customers-table__heading, .customers-table__status-note {
+  text-align: left;
+}
+.customers-table__head-row > th {
+  font-weight: 500;
+}
+.customers-table__head-row > th:not(:last-child) {
+  text-align: left;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pagination__btn {
+  font-size: 12px;
+  line-height: 1;
 }/*# sourceMappingURL=main.css.map */
