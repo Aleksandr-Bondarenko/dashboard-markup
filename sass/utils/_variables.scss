@@ -1,0 +1,50 @@
+$font-family: "Poppins", sans-serif;
+
+//Colors
+$shadow-color: #e2ecf980;
+
+//Colors maps
+$text-colors: (
+  "main-content": #292d32,
+  "secondary": #b5b7c0,
+  "accent": #ffffff,
+  "greeting": #000000,
+  "app-name": #000000,
+  "table-name": #000000,
+  "app-version": #838383,
+  "nav-menu-item": #9197b3,
+  "user-position": #757575,
+  "status-note": #16c098,
+  "active-btn": #008767,
+  "inactive-btn": #df0404,
+  "pagination-btn": #404b52,
+);
+
+$background-colors: (
+  "main": #fafbff,
+  "secondary": #ffffff,
+  "accent": #5932ea,
+  "input": #f9fbff,
+  "pagination-btn": #f5f5f5,
+  "active-btn": #16c09861,
+  "inactive-btn": #ffc5c5,
+);
+
+$border-colors: (
+  "input": #e7e7e7,
+  "active-btn": #008767,
+  "inactive-btn": #df0404,
+  "pagination-btn": #eeeeee,
+);
+
+@function getTextColor($key) {
+  @return map-get($text-colors, $key);
+}
+
+@function getBgc($key) {
+  @return map-get($background-colors, $key);
+}
+
+@function getBorderColor($key) {
+  @return map-get($border-colors, $key);
+}

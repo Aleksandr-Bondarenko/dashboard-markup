@@ -1,3 +1,14 @@
 .customers__search {
+  width: 216px;
+  height: 38px;
+  padding: 10px 0 10px 40px;
   @include font(12px, 400);
+  background-color: getBgc("input");
+  border: 1px solid getBorderColor("input");
+  border-radius: 10px;
+  outline: none;
+
+  &::placeholder {
+    color: getTextColor("secondary");
+  }
 }

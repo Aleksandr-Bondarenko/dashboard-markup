@@ -1,7 +1,8 @@
 body {
   display: flex;
-  font-family: "Poppins", sans-serif;
+  font-family: $font-family;
   @include font(14px, 500);
+  color: getTextColor("main-content");
 }
 
 h1,
@@ -30,4 +31,5 @@ p {
 
 .greeting {
   @include font(24px, 500, 0em);
+  color: getTextColor("greeting");
 }

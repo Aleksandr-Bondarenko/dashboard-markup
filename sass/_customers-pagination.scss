@@ -2,7 +2,20 @@
   display: flex;
 
   &__btn {
+    width: 24px;
+    height: 24px;
+    padding: 0;
     font-size: 12px;
     line-height: 1;
+    border: 1px solid getBorderColor("pagination-btn");
+    border-radius: 4px;
+    color: getTextColor("pagination-btn");
+    background-color: getBgc("pagination-btn");
+
+    &--accent {
+      color: getTextColor("accent");
+      background-color: getBgc("accent");
+      border-color: getBgc("accent");
+    }
   }
 }

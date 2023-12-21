@@ -2,6 +2,11 @@
   //   @include font(14px, 500);
   &__heading {
     @include font(22px, 600);
+    color: getTextColor("table-name");
+  }
+
+  &__status-note {
+    color: getTextColor("status-note");
   }
 
   &__heading,
@@ -11,9 +16,25 @@
 
   &__head-row > th {
     font-weight: 500;
+    color: getTextColor("secondary");
   }
 
   &__head-row > th:not(:last-child) {
     text-align: left;
+  }
+
+  &__status-btn {
+    width: 80px;
+    height: 29px;
+    border: 1px solid getBorderColor("inactive-btn");
+    border-radius: 4px;
+    color: getTextColor("inactive-btn");
+    background-color: getBgc("inactive-btn");
+  }
+
+  &__status-btn--active {
+    color: getTextColor("active-btn");
+    background-color: getBgc("active-btn");
+    border-color: getBorderColor("active-btn");
   }
 }

@@ -8,22 +8,49 @@
   &__text {
     @include font(26px, 600, 0.01em);
     margin-left: 8px;
+    color: getTextColor("app-name");
   }
 
   &__subtext {
     @include font(10px, 500);
     margin-left: 4px;
+    color: getTextColor("app-version");
   }
 }
 
 .nav-menu {
   margin-bottom: 598px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 46px;
+    padding: 11px 8px;
+    color: getTextColor("nav-menu-item");
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  &__item--accent {
+    border-radius: 8px;
+    color: getTextColor("accent");
+    background-color: getBgc("accent");
+  }
+
+  &__link {
+    color: inherit;
+  }
 }
 
 .user-name {
   letter-spacing: 0.01em;
+  color: getTextColor("user-name");
 }
 
 .user-position {
   @include font(12px, 400, 0.01em);
+  color: getTextColor("user-position");
 }
