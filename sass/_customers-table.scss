@@ -5,13 +5,14 @@
 
   &__caption {
     position: fixed;
-    top: 28%;
+    top: 22%;
     left: 50%;
-    transform: translate(-50%, -28%);
-    padding-bottom: 50px;
-    width: 80vw;
-    border-radius: 10px;
-    box-shadow: 0 0px 34px 8px getTextColor("app-version");
+    transform: translate(-50%, -22%);
+    width: 90vw;
+    padding-top: 20px;
+    padding-bottom: 58px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     background-color: getBgc("secondary");
   }
 
@@ -32,7 +33,7 @@
   }
 
   &__head th {
-    padding: 130px 0 14px;
+    padding: 100px 0 14px;
     font-weight: 500;
     color: getTextColor("secondary");
   }
@@ -70,6 +71,7 @@
   &__body td {
     padding: 20px 0;
     border-bottom: 1px solid getBorderColor("pagination-btn");
+    text-align: left;
   }
 
   &__body td:first-child {
@@ -91,12 +93,29 @@
     border-radius: 4px;
     color: getTextColor("inactive-btn");
     background-color: getBgc("inactive-btn");
+    outline: none;
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 16px 2px getBorderColor("inactive-btn");
+        transition: box-shadow 280ms $cubic;
+      }
+    }
   }
 
   &__status-btn--active {
     color: getTextColor("active-btn");
     background-color: getBgc("active-btn");
     border-color: getBorderColor("active-btn");
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 16px 2px getBorderColor("active-btn");
+        transition: box-shadow 280ms $cubic;
+      }
+    }
   }
 }
 
@@ -106,10 +125,9 @@
       position: static;
       width: auto;
       margin-bottom: 37px;
-      padding-bottom: 0;
-      padding-left: 38px;
+      padding: 0 0 0 38px;
       transform: translate(0, 0);
-      box-shadow: none;
+      border-radius: 0;
     }
 
     &__heading,

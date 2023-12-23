@@ -40,7 +40,7 @@ p {
 
 .greeting {
   text-align: center;
-  margin-bottom: 57px;
+  margin-bottom: 26px;
   @include font(24px, 500, 0em);
   color: getTextColor("greeting");
 }
@@ -87,6 +87,7 @@ p {
   }
 
   .greeting {
+    margin-bottom: 51px;
     text-align: left;
   }
 }

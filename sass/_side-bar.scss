@@ -32,6 +32,7 @@
 }
 
 .nav-menu {
+  margin-bottom: 160px;
   &__item {
     position: relative;
     display: flex;
@@ -39,9 +40,6 @@
     width: 100%;
     height: 46px;
     color: getTextColor("nav-menu-item");
-  }
-
-  &__item {
     cursor: pointer;
   }
 
@@ -50,11 +48,10 @@
   }
 
   &__icon {
+    position: absolute;
     fill: getTextColor("nav-menu-item");
     stroke: getTextColor("nav-menu-item");
     pointer-events: none;
-
-    position: absolute;
   }
 
   &__icon:first-child {
@@ -72,7 +69,15 @@
     padding-left: 49px;
     padding-top: 12px;
     padding-bottom: 12px;
+    border-radius: 8px;
     color: inherit;
+    outline: none;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    box-shadow: inset 0 0 20px 5px getBgc("accent");
+    transition: box-shadow 280ms $cubic;
   }
 }
 

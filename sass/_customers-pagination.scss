@@ -22,11 +22,20 @@
     border-radius: 4px;
     color: getTextColor("pagination-btn");
     background-color: getBgc("pagination-btn");
+    outline: none;
 
     &--accent {
       color: getTextColor("accent");
       background-color: getBgc("accent");
       border-color: getBgc("accent");
+    }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 4px 2px getBgc("accent");
+        transition: box-shadow 280ms $cubic;
+      }
     }
   }
 }

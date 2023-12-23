@@ -9,6 +9,8 @@ const refs = {
   backBtn: document.querySelector(".back-btn"),
   tableBody: document.querySelector(".customers-table__body"),
   sections: document.querySelectorAll(".section"),
+  pagination: document.querySelector(".pagination"),
+  paginationBtnList: document.querySelectorAll(".pagination__btn"),
 };
 
 const {
@@ -19,11 +21,14 @@ const {
   backBtn,
   tableBody,
   sections,
+  pagination,
+  paginationBtnList,
 } = refs;
 
 navMenuList.addEventListener("click", navigationHandler);
 backBtn.addEventListener("click", backBtnHandler);
 tableBody.addEventListener("click", statusBtnHandler);
+pagination.addEventListener("click", paginationBtnHandler);
 
 function navigationHandler(event) {
   event.preventDefault();
@@ -40,9 +45,8 @@ function navigationHandler(event) {
   if (event.currentTarget !== event.target) {
     navMenuItems.forEach((el) => el.classList.remove("nav-menu__item--accent"));
     event.target.parentNode.classList.add("nav-menu__item--accent");
+    changeSection(event.target.textContent);
   }
-
-  changeSection(event.target.textContent);
 }
 
 function backBtnHandler() {
@@ -76,4 +80,14 @@ function changeSection(name) {
     el.classList.contains(name.toLowerCase()) &&
       el.classList.add("section--show");
   });
+}
+
+function paginationBtnHandler(event) {
+  const isArrowBtn = Number.isNaN(Number(event.target.textContent));
+  if (isArrowBtn) return;
+
+  paginationBtnList.forEach((el) =>
+    el.classList.remove("pagination__btn--accent")
+  );
+  event.target.classList.add("pagination__btn--accent");
 }
