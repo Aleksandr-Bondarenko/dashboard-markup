@@ -65,6 +65,14 @@ p {
   background-color: #5932ea;
 }
 
+.section {
+  display: none;
+}
+.section--show {
+  display: block;
+  text-align: center;
+}
+
 @media screen and (min-width: 431px) {
   body {
     display: -webkit-box;
@@ -79,6 +87,9 @@ p {
   }
   .back-btn {
     display: none;
+  }
+  .section--show {
+    text-align: left;
   }
   .greeting {
     text-align: left;

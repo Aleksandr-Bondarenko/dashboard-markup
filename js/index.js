@@ -7,12 +7,23 @@ const refs = {
   navMenuItems: document.querySelectorAll(".nav-menu__item"),
   mainContent: document.querySelector(".main-content"),
   backBtn: document.querySelector(".back-btn"),
+  tableBody: document.querySelector(".customers-table__body"),
+  sections: document.querySelectorAll(".section"),
 };
 
-const { sideBar, navMenuList, navMenuItems, mainContent, backBtn } = refs;
+const {
+  sideBar,
+  navMenuList,
+  navMenuItems,
+  mainContent,
+  backBtn,
+  tableBody,
+  sections,
+} = refs;
 
 navMenuList.addEventListener("click", navigationHandler);
 backBtn.addEventListener("click", backBtnHandler);
+tableBody.addEventListener("click", statusBtnHandler);
 
 function navigationHandler(event) {
   event.preventDefault();
@@ -26,13 +37,12 @@ function navigationHandler(event) {
     backBtn.classList.remove("back-btn--hidden");
   }
 
-  //====================
   if (event.currentTarget !== event.target) {
     navMenuItems.forEach((el) => el.classList.remove("nav-menu__item--accent"));
     event.target.parentNode.classList.add("nav-menu__item--accent");
   }
 
-  // console.log(">>>", event.target.textContent);
+  changeSection(event.target.textContent);
 }
 
 function backBtnHandler() {
@@ -47,4 +57,23 @@ function backBtnHandler() {
   if (viewportWidth > 430) {
     navMenuItems.forEach((el) => el.classList.remove("nav-menu__item--accent"));
   }
+}
+
+function statusBtnHandler(event) {
+  const { localName, textContent } = event.target;
+  if (localName !== "button") return;
+
+  textContent.trim() === "Active"
+    ? (event.target.innerText = "Inactive")
+    : (event.target.innerText = "Active");
+
+  event.target.classList.toggle("customers-table__status-btn--active");
+}
+
+function changeSection(name) {
+  sections.forEach((el) => {
+    el.classList.remove("section--show");
+    el.classList.contains(name.toLowerCase()) &&
+      el.classList.add("section--show");
+  });
 }

@@ -57,6 +57,15 @@ p {
   background-color: getBgc("accent");
 }
 
+.section {
+  display: none;
+
+  &--show {
+    display: block;
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 431px) {
   body {
     display: flex;
@@ -71,6 +80,10 @@ p {
 
   .back-btn {
     display: none;
+  }
+
+  .section--show {
+    text-align: left;
   }
 
   .greeting {
