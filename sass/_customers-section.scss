@@ -1,21 +1,24 @@
 .customers {
   position: relative;
-  width: 968px;
-  height: 812px;
+  max-width: 100vw;
+  max-height: 70vh;
+  overflow: scroll;
   padding-top: 24px;
   border-radius: 30px;
   background-color: getBgc("secondary");
   box-shadow: 0 10px 60px 0 $shadow-color;
 
   &__data-note {
-    margin-right: 376px;
     color: getTextColor("secondary");
+    margin-bottom: 20px;
   }
 
   &__search-wrap {
-    position: absolute;
-    top: 38px;
-    right: 53px;
+    position: fixed;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -34%);
+    z-index: 100;
   }
 
   &__search-wrap::before {
@@ -30,8 +33,36 @@
   }
 
   &__footer {
-    display: flex;
-    margin-top: 34px;
     padding-left: 38px;
+    padding-bottom: 20px;
+    margin-top: 14px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 431px) {
+    & {
+      min-width: 968px;
+      min-height: 812px;
+      overflow: auto;
+    }
+
+    &__search-wrap {
+      position: absolute;
+      top: 38px;
+      right: 53px;
+      left: auto;
+      transform: translate(0, 0);
+    }
+
+    &__footer {
+      display: flex;
+      margin-top: 34px;
+      padding-bottom: 0;
+    }
+
+    &__data-note {
+      margin-right: 376px;
+      margin-bottom: 0;
+    }
   }
 }

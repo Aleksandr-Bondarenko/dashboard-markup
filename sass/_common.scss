@@ -1,5 +1,4 @@
 body {
-  display: flex;
   font-family: $font-family;
   @include font(14px, 500);
   color: getTextColor("main-content");
@@ -31,12 +30,60 @@ p {
 }
 
 .main-content {
-  padding-top: 41px;
-  padding-right: 28px;
+  display: none;
+
+  &--show {
+    display: block;
+    padding: 36px 20px;
+  }
 }
 
 .greeting {
+  text-align: center;
   margin-bottom: 57px;
   @include font(24px, 500, 0em);
   color: getTextColor("greeting");
+}
+
+.back-btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 10px;
+  @include font(20px, 500);
+  color: getTextColor("accent");
+  background-color: getBgc("accent");
+}
+
+@media screen and (min-width: 431px) {
+  body {
+    display: flex;
+  }
+
+  .main-content {
+    display: block;
+    padding-top: 41px;
+    padding-right: 28px;
+    padding-bottom: 36px;
+  }
+
+  .back-btn {
+    display: none;
+  }
+
+  .greeting {
+    text-align: left;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .back-btn {
+    display: inline;
+
+    &--hidden {
+      display: none;
+    }
+  }
 }

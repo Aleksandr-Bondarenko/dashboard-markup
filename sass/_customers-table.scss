@@ -1,26 +1,30 @@
 .customers-table {
-  // max-width: 968;
-  // overflow: scroll;
   border-collapse: collapse;
+  width: 968px;
+  height: 587px;
 
   &__caption {
-    margin-bottom: 37px;
-    padding-left: 38px;
+    position: fixed;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -28%);
+    padding-bottom: 50px;
+    width: 80vw;
+    border-radius: 10px;
+    box-shadow: 0 0px 34px 8px getTextColor("app-version");
+    background-color: getBgc("secondary");
   }
 
   &__heading {
     @include font(22px, 600);
     color: getTextColor("table-name");
     margin-bottom: 7px;
+    text-align: center;
   }
 
   &__status-note {
     color: getTextColor("status-note");
-  }
-
-  &__heading,
-  &__status-note {
-    text-align: left;
+    text-align: center;
   }
 
   &__head tr {
@@ -28,8 +32,7 @@
   }
 
   &__head th {
-    padding: 0;
-    padding-bottom: 14px;
+    padding: 130px 0 14px;
     font-weight: 500;
     color: getTextColor("secondary");
   }
@@ -94,5 +97,28 @@
     color: getTextColor("active-btn");
     background-color: getBgc("active-btn");
     border-color: getBorderColor("active-btn");
+  }
+}
+
+@media screen and (min-width: 431px) {
+  .customers-table {
+    &__caption {
+      position: static;
+      width: auto;
+      margin-bottom: 37px;
+      padding-bottom: 0;
+      padding-left: 38px;
+      transform: translate(0, 0);
+      box-shadow: none;
+    }
+
+    &__heading,
+    &__status-note {
+      text-align: left;
+    }
+
+    &__head th {
+      padding-top: 0;
+    }
   }
 }

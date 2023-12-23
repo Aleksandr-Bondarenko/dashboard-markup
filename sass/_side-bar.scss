@@ -1,10 +1,13 @@
 .side-bar {
   position: relative;
-  width: 306px;
+  max-width: 100vw;
   min-height: 100vh;
-  margin-right: 71px;
-  padding: 36px 28px 0;
+  padding: 36px 16px;
   background-color: getBgc("secondary");
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .logo {
@@ -30,11 +33,11 @@
 
 .nav-menu {
   &__item {
+    position: relative;
     display: flex;
     align-items: center;
-    width: 250px;
+    width: 100%;
     height: 46px;
-    padding: 11px 8px;
     color: getTextColor("nav-menu-item");
   }
 
@@ -46,25 +49,54 @@
     margin-bottom: 18px;
   }
 
-  &__item--accent {
-    border-radius: 8px;
-    color: getTextColor("accent");
-    background-color: getBgc("accent");
-  }
-
-  &__item--accent &__icon {
-    fill: getTextColor("accent");
-    stroke: getTextColor("accent");
-  }
-
   &__icon {
     fill: getTextColor("nav-menu-item");
     stroke: getTextColor("nav-menu-item");
+    pointer-events: none;
+
+    position: absolute;
+  }
+
+  &__icon:first-child {
+    top: 11px;
+    left: 11px;
+  }
+
+  &__icon:last-child {
+    top: 15px;
+    right: 8px;
   }
 
   &__link {
-    margin-left: 14px;
-    margin-right: auto;
+    width: 100%;
+    padding-left: 49px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     color: inherit;
+  }
+}
+
+@media screen and (min-width: 431px) {
+  .side-bar {
+    width: 306px;
+    margin-right: 71px;
+    padding: 36px 28px 0;
+  }
+
+  .nav-menu {
+    &__item {
+      width: 250px;
+    }
+
+    &__item--accent {
+      border-radius: 8px;
+      color: getTextColor("accent");
+      background-color: getBgc("accent");
+    }
+
+    &__item--accent &__icon {
+      fill: getTextColor("accent");
+      stroke: getTextColor("accent");
+    }
   }
 }
